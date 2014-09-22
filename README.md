@@ -14,3 +14,6 @@ TODO:
 
 * adding tag after incrementing version
 * merge hook does not work on commit after merge conflict
+
+INSTALLATION:
+Copy choosen hook to your .git/hooks directory.
