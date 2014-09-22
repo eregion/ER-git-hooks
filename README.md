@@ -8,7 +8,7 @@ Git hooks being used in our project
 Main goal of this hook - autoincrement project version.
 Hook runs after merge only if current branch is master.
 It increments version in specified file and rewrite last commit.
-Note: increments only last part of version (__.__.__.XX)
+Note: increments only last part of version (xx.xx.xx.XX)
 
 TODO: 
 
