@@ -3,7 +3,7 @@
 # Хук срабатывает после merge, если merge выполнялся в ветке master
 # 
 
-# Папка 
+# Версионный файл
 versionFile="ERegion.Web/App_Code/AssemblyInfo.cs"
 
 # узнаём название текущей ветки
