@@ -6,13 +6,14 @@
 # узнаём название текущей ветки
 branch="$(git symbolic-ref HEAD 2>/dev/null)" || branch="(unnamed branch)"
 branch=${branch##refs/heads/}
+folder="ERegion.Web/App_Code"
 
 # проверяем не в master'е ли мы
 if [ "$branch" = "master" ]; then 
 # увеличиваем на 1 последнее число в нужном файле и удаляем временный файл
- perl -pi.bak -e 's/(\d+)"/$1 + 1/e' ERegion.Web/App_Code/AssemblyInfo.cs && perl -pi.bak -e 's/(\d.\d.\d.\d*)/$1"/' ERegion.Web/App_Code/AssemblyInfo.cs 
- rm Eregion.Web/App_Code/AssemblyInfo.cs.bak
+ perl -pi.bak -e 's/(\d+)"/$1 + 1/e' $folder/AssemblyInfo.cs && perl -pi.bak -e 's/(\d.\d.\d.\d*)/$1"/' $folder/AssemblyInfo.cs 
+ rm $folder/AssemblyInfo.cs.bak
 # переписываем последний коммит
- git add ERegion.Web/App_Code/AssemblyInfo.cs
+ git add $folder/AssemblyInfo.cs
  git commit --amend --no-edit
 fi
